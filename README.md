@@ -49,6 +49,10 @@ in this section. If your library is passive and has no API, simply omit this
 section.
 -->
 
+Work in progress. 
+
+Events are published to a Redis channel, where other applications can pick them up. My idea here is to eventually pump these things into an ELK stack for visualization.
+
 ## Testing
 
 <!--
