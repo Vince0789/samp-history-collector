@@ -1,6 +1,6 @@
-# samp-redis-event-logger
+# samp-history-collector
 
-[![sampctl](https://shields.southcla.ws/badge/sampctl-samp--redis--event--logger-2f2f2f.svg?style=for-the-badge)](https://github.com/Vince0789/samp-redis-event-logger)
+[![sampctl](https://shields.southcla.ws/badge/sampctl-samp--history--collector-2f2f2f.svg?style=for-the-badge)](https://github.com/Vince0789/samp-history-collector)
 
 <!--
 Short description of your library, why it's useful, some examples, pictures or
@@ -31,13 +31,13 @@ Happy Pawning!
 Simply install to your project:
 
 ```bash
-sampctl package install Vince0789/samp-redis-event-logger
+sampctl package install Vince0789/samp-history-collector
 ```
 
 Include in your code and begin using the library:
 
 ```pawn
-#include <samp-redis-event-logger>
+#include <collector>
 ```
 
 ## Usage
