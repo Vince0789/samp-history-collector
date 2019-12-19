@@ -3,6 +3,6 @@
 
 hook OnGameModeInit()
 {
-    History_CollectGeneralEvent("OnGameModeExit", JsonObject());
+    History_CollectGeneralEvent("on.gamemode.init", JsonObject());
     return 1;
 }

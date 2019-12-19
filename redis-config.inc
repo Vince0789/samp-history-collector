@@ -1,7 +1,7 @@
 
-// ---------------------------------------------------------------------------------------
-// Connection parameters
-// ---------------------------------------------------------------------------------------
+/*
+ * Connection parameters
+ */
 
 #if !defined REDIS_HOST
     #define REDIS_HOST "127.0.0.1"
@@ -15,9 +15,13 @@
     #define REDIS_AUTH ""
 #endif
 
-// ---------------------------------------------------------------------------------------
-// Channel configuration
-// ---------------------------------------------------------------------------------------
+/*
+ * Channel configuration. 
+ * 
+ * Ideally all the channel names should start with the same prefix (e.g. "samp-") so the 
+ * redis PSUBSCRIBE command can be used to subscribe to all channels simultaneously. See 
+ * the logstash/logstash-sample-config.conf file for an example.
+ */
 
 #define HISTORY_DC_CHANNEL_GENERAL  "samp-general"
 #define HISTORY_DC_CHANNEL_PLAYER   "samp-player"

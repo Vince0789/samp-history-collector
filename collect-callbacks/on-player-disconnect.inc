@@ -3,7 +3,7 @@
 
 hook OnPlayerDisconnect(playerid, reason)
 {
-    History_CollectPlayerEvent("OnPlayerDisconnect", playerid, JsonObject(
+    History_CollectPlayerEvent("on.player.disconnect", playerid, JsonObject(
         "reason", JsonInt(reason)
     ));
     return 1;

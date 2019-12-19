@@ -3,6 +3,6 @@
 
 hook OnPlayerConnect(playerid)
 {
-    History_CollectPlayerEvent("OnPlayerConnect", playerid, JsonObject());
+    History_CollectPlayerEvent("on.player.connect", playerid, JsonObject());
     return 1;
 }

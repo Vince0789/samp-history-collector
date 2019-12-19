@@ -1,3 +1,4 @@
-#include "collect-callbacks\OnGameModeInit.inc"
-#include "collect-callbacks\OnPlayerConnect.inc"
-#include "collect-callbacks\OnPlayerDisconnect.inc"
+#include "collect-callbacks\on-gamemode-init.inc"
+#include "collect-callbacks\on-gamemode-exit.inc"
+#include "collect-callbacks\on-player-connect.inc"
+#include "collect-callbacks\on-player-disconnect.inc"

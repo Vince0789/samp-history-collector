@@ -61,7 +61,7 @@ stock History_CollectGeneralEvent(const event[], Node:params)
         Node:rootNode;
 
     History_GetRoodNode(event, rootNode);
-    JsonSetObject(rootNode, "params", params);
+    JsonSetObject(rootNode, event, params);
 
     return Redis_PublishJson(gClient, HISTORY_DC_CHANNEL_GENERAL, rootNode);
 }
@@ -75,7 +75,7 @@ stock History_CollectPlayerEvent(const event[], playerid, Node:params)
     History_GetRoodNode(event, rootNode);
     Redis_GetPlayerInfo(gClient, playerid, playerNode);
     JsonSetObject(rootNode, "player", playerNode);
-    JsonSetObject(rootNode, "params", params);
+    JsonSetObject(rootNode, event, params);
 
     return Redis_PublishJson(gClient, HISTORY_DC_CHANNEL_PLAYER, rootNode);
 }
