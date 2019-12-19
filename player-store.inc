@@ -19,7 +19,7 @@
 #endif
 
 #if !defined REDIS_PLAYER_STORE_VALUE_SIZE
-    #define REDIS_PLAYER_STORE_VALUE_SIZE (80 + MAX_PLAYER_NAME + MAX_PLAYER_IP + MAX_PLAYER_GPCI)
+    #define REDIS_PLAYER_STORE_VALUE_SIZE (85 + MAX_PLAYER_NAME + MAX_PLAYER_IP + MAX_PLAYER_GPCI)
 #endif
 
 stock Redis_StorePlayerInfo(Redis:client, playerid)
@@ -31,17 +31,17 @@ stock Redis_StorePlayerInfo(Redis:client, playerid)
 
     new
         name[MAX_PLAYER_NAME + 1],
-        ip[15 + 1],
+        ipport[15 + 5 + 2],
         pci[40 + 1];
 
     GetPlayerName(playerid, name, sizeof name);
-    GetPlayerIp(playerid, ip, sizeof ip);
+    NetStats_GetIpPort(playerid, ipport, sizeof ipport);
     gpci(playerid, pci, sizeof pci);
 
     new Node:valueNode = JsonObject(
         "id", JsonInt(playerid),
         "name", JsonString(name),
-        "ip", JsonString(ip),
+        "ip_port", JsonString(ipport),
         "pci", JsonString(pci),
         "is_npc", JsonBool(!!IsPlayerNPC(playerid))
     );
