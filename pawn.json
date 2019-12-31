@@ -1,6 +1,6 @@
 {
 	"user": "Vince0789",
-	"repo": "samp-redis-event-logger",
+	"repo": "samp-history-collector",
 	"entry": "test.pwn",
 	"output": "test.amx",
 	"dependencies": [
